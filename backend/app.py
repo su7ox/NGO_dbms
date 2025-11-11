@@ -9,7 +9,7 @@ bcrypt = Bcrypt(app)
 # --- Database Connection ---
 DB_NAME = "ngo_db"
 DB_USER = "postgres"
-DB_PASS = "1367" 
+DB_PASS = "YOUR_DB_PASSWORD" # Get password from environment variable or set it here
 DB_HOST = "localhost"
 DB_PORT = "5432"
 
@@ -1002,4 +1002,5 @@ def get_all_users():
             "role": row[2],
             "created_at": row[3].strftime('%Y-%m-%d %H:%M:%S')
         })
+
     return jsonify(user_list), 200
