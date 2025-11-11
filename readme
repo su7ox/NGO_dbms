@@ -1,0 +1,66 @@
+# NGO Resource & Donation Management System
+
+This is a full-stack web application for managing an NGO. It features a Python (Flask) backend, a PostgreSQL database, and a React.js frontend.
+
+## Features
+- 💎 **Public Website:** Home page with live stats from the database.
+- 🔐 **Authentication:** Full login/registration for different user roles (Admin, Donor, Volunteer).
+- 👨‍💼 **Admin Dashboard:** A secure panel to manage all 12 tables, including users, campaigns, expenses, and volunteers.
+- 👤 **Client Dashboard:** A personal profile page for donors and volunteers to view their data.
+- 📦 **Full Resource Tracking:** Manages donations (cash and in-kind), expenses, and distributions to beneficiaries.
+
+---
+
+## How to Run This Project
+
+You will need two terminals running at the same time: one for the backend and one for the frontend.
+
+### Prerequisites
+* Python 3.10+
+* PostgreSQL (with pgAdmin)
+* Node.js (which includes npm)
+
+### 1. Backend Setup (Flask API)
+
+1.  **Create the Database:**
+    * Open pgAdmin and create a new, empty database named `ngo_db`.
+    * Open the Query Tool for `ngo_db`, paste the entire contents of `schema.sql` into it, and run the script. This will create all 12 tables.
+
+2.  **Install Python Packages:**
+    ```bash
+    # Create a virtual environment
+    python -m venv venv
+
+    # Activate it (Windows)
+    .\venv\Scripts\activate
+
+    # Install required packages
+    pip install -r requirements.txt
+    ```
+
+3.  **Set Your Password:**
+    * Open `app.py` and change the `DB_PASS` variable to your own PostgreSQL password.
+
+4.  **Run the Backend Server:**
+    ```bash
+    python -m flask run
+    ```
+    *Your backend is now running on `http://localhost:5000`.*
+
+### 2. Frontend Setup (React App)
+
+1.  **Navigate to the frontend folder:**
+    ```bash
+    cd ngo-frontend
+    ```
+
+2.  **Install Node Modules:**
+    ```bash
+    npm install
+    ```
+
+3.  **Run the Frontend Server:**
+    ```bash
+    npm start
+    ```
+    *Your frontend is now running on `http://localhost:3000` and will open in your browser.*
