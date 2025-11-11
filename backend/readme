@@ -1,1 +1,16 @@
+Description
 
+This is the backend part of the project.
+It is built using Python and can be easily set up using a virtual environment.
+
+
+Create your own virtual environment
+⚠️ Note: The venv folder is not uploaded. You need to create your own.
+python -m venv venv
+
+
+Activate the virtual environment
+Windows
+venv\Scripts\activate
+macOS/Linux
+source venv/bin/activate
