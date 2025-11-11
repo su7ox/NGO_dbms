@@ -1,0 +1,325 @@
+/* --- Basic Reset & Main App Styling --- */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #f4f7f6;
+  color: #333;
+}
+
+.App {
+  text-align: center;
+}
+
+/* --- Navbar Styling --- */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: #ffffff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.navbar-logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #007bff;
+}
+
+.navbar-links a {
+  margin: 0 0.75rem;
+  text-decoration: none;
+  color: #555;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.navbar-links a:hover {
+  color: #007bff;
+}
+
+.navbar-login {
+  background-color: #007bff;
+  color: #ffffff !important;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.navbar-login:hover {
+  background-color: #0056b3;
+}
+
+/* --- Hero Section Styling --- */
+.hero {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://images.unsplash.com/photo-1532629345422-7515f3d16bb6?w=800&q=80');
+  background-size: cover;
+  background-position: center;
+  height: 60vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+}
+
+.hero-content {
+  max-width: 600px;
+}
+
+.hero-content h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.hero-content p {
+  font-size: 1.25rem;
+  margin-bottom: 2rem;
+}
+
+.hero-button {
+  background-color: #007bff;
+  color: #ffffff;
+  padding: 0.75rem 1.5rem;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+.hero-button:hover {
+  background-color: #0056b3;
+}
+
+/* --- Stats Section Styling --- */
+.stats-section {
+  padding: 4rem 2rem;
+  background-color: #ffffff;
+}
+
+.stats-section h2 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+
+.stats-container {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.stat-card {
+  background-color: #f4f7f6;
+  padding: 2rem;
+  border-radius: 8px;
+  min-width: 250px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+}
+
+.stat-card h3 {
+  font-size: 2.5rem;
+  color: #007bff;
+  margin-bottom: 0.5rem;
+}
+
+.stat-card p {
+  font-size: 1.1rem;
+  color: #555;
+}
+
+/* --- Campaigns Section Styling --- */
+.campaigns-section {
+  padding: 4rem 2rem;
+}
+
+.campaigns-section h2 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+
+.campaigns-container {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.campaign-card {
+  background-color: #ffffff;
+  padding: 2rem;
+  border-radius: 8px;
+  width: 350px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: left;
+}
+
+.campaign-card h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.campaign-card p {
+  margin-bottom: 1rem;
+  color: #555;
+}
+
+/* --- Re-using hero-button style for campaign card --- */
+.campaign-card .hero-button {
+  font-size: 0.9rem;
+  padding: 0.6rem 1.2rem;
+}
+/* --- Auth Container and Form Styling --- */
+.auth-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 80vh; /* Adjust height as needed */
+  background-color: #f4f7f6;
+}
+
+.auth-form {
+  background-color: #ffffff;
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 400px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  text-align: center;
+}
+
+.auth-form h2 {
+  color: #007bff;
+  margin-bottom: 25px;
+  font-size: 2rem;
+}
+
+.auth-form input,
+.auth-form select,
+.auth-form button {
+  padding: 12px 15px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 1rem;
+  width: 100%;
+}
+
+.auth-form input:focus,
+.auth-form select:focus {
+  border-color: #007bff;
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.25);
+}
+
+.auth-form button {
+  background-color: #007bff;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.auth-form button:hover {
+  background-color: #0056b3;
+}
+
+.error-message {
+  color: #dc3545;
+  font-weight: 500;
+}
+
+.success-message {
+  color: #28a745;
+  font-weight: 500;
+}
+
+.auth-switch {
+  font-size: 0.9rem;
+  color: #666;
+  margin-top: 15px;
+}
+
+.auth-switch span {
+  color: #007bff;
+  cursor: pointer;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.auth-switch span:hover {
+  text-decoration: underline;
+  color: #0056b3;
+}
+
+/* --- Utility for clickable elements --- */
+.clickable {
+    cursor: pointer;
+}
+
+/* --- Style for Welcome message --- */
+.navbar-text {
+    margin: 0 0.75rem;
+    color: #333;
+    font-weight: 500;
+}
+/* --- Dashboard Styling --- */
+.dashboard-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.dashboard-content {
+  padding: 2rem 4rem;
+  background-color: #ffffff;
+  flex-grow: 1;
+}
+
+.dashboard-content h1 {
+  font-size: 2.5rem;
+  color: #007bff;
+  margin-bottom: 0.5rem;
+}
+
+.dashboard-content h3 {
+  font-size: 1.5rem;
+  color: #555;
+  margin-bottom: 2rem;
+  font-weight: 400;
+}
+
+.profile-details {
+  background-color: #f9f9f9;
+  border: 1px solid #eee;
+  border-radius: 8px;
+  padding: 2rem;
+  max-width: 600px;
+  text-align: left;
+}
+
+.profile-details p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+}
+
+.profile-details p strong {
+  color: #333;
+  min-width: 120px;
+  display: inline-block;
+}
