@@ -1,0 +1,132 @@
+/* src/AdminDashboard.css */
+
+.admin-container {
+  display: flex;
+  min-height: 100vh;
+}
+
+.admin-sidebar {
+  width: 250px;
+  background-color: #2c3e50; /* Dark blue/grey */
+  color: #ecf0f1; /* Light grey text */
+  display: flex;
+  flex-direction: column;
+}
+
+.admin-sidebar-header {
+  padding: 1.5rem 1rem;
+  text-align: center;
+  background-color: #34495e; /* Slightly lighter */
+}
+
+.admin-sidebar-header h3 {
+  font-size: 1.5rem;
+}
+
+.admin-sidebar ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  flex-grow: 1; /* Makes the list grow to fill space */
+}
+
+.admin-sidebar ul li a {
+  display: block;
+  padding: 1rem 1.5rem;
+  text-decoration: none;
+  color: #ecf0f1;
+  border-bottom: 1px solid #34495e;
+  transition: background-color 0.3s ease;
+}
+
+.admin-sidebar ul li a:hover {
+  background-color: #4a627a;
+}
+
+.admin-sidebar-footer {
+  padding: 1rem;
+  text-align: center;
+}
+
+.admin-logout {
+  background-color: #e74c3c; /* Red */
+  color: #ffffff;
+  padding: 0.75rem 1.5rem;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+  display: block;
+  transition: background-color 0.3s ease;
+}
+
+.admin-logout:hover {
+  background-color: #c0392b; /* Darker red */
+}
+
+.admin-main-content {
+  flex-grow: 1; /* Takes up the remaining space */
+  padding: 2rem 3rem;
+  background-color: #ecf0f1; /* Light grey background */
+}
+/* src/AdminDashboard.css */
+
+.admin-page-content h2 {
+  font-size: 2rem;
+  color: #34495e;
+  margin-bottom: 1rem;
+}
+
+.admin-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 2rem;
+  background-color: #ffffff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+}
+
+.admin-table th,
+.admin-table td {
+  border: 1px solid #ddd;
+  padding: 12px 15px;
+  text-align: left;
+}
+
+.admin-table th {
+  background-color: #f4f7f6;
+  font-weight: 600;
+}
+
+.admin-table tbody tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.admin-table tbody tr:hover {
+  background-color: #f1f1f1;
+}
+
+.admin-btn-edit {
+  background-color: #3498db; /* Blue */
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-right: 5px;
+}
+
+.admin-btn-delete {
+  background-color: #e74c3c; /* Red */
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.admin-btn-edit:hover {
+  background-color: #2980b9;
+}
+
+.admin-btn-delete:hover {
+  background-color: #c0392b;
+}
